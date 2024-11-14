@@ -1,0 +1,557 @@
+/* Color Palette */
+:root {
+    --primary-black: #000000;
+    --secondary-purple: #3E065F;
+    --tertiary-purple: #700B97;
+    --quaternary-purple: #8E05C2;
+    --my-animation-duration: 100s;
+}
+
+* {
+    /* Remember to change font styling */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+#background-slider {
+    background-image: url(./assets/stars-wallpaper.jpg);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*  -------------------------------------    */
+/*          START OF INTRO ANIMATION         */
+#hello-label {
+    border: 5px solid var(--quaternary-purple);
+    border-radius: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: din-round,sans-serif;
+    font-weight: 700;
+    outline: none;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+
+    width: 22%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-self: center;
+    place-items: center;
+    overflow: hidden;
+}
+
+#title-cards {
+    text-align: center;
+    padding: 10vh 0 0 0;
+    width: 100%;
+    position: relative;
+    top: -12vh;
+    z-index: 2;
+}
+
+#hello-label:hover {
+    cursor: pointer;
+    border: 5px solid rgb(148, 145, 145);
+    background-color: #303030;
+}
+
+#hello-button:checked + #title-cards  {
+    animation: scroll 9s ease-in-out 0.5s forwards;
+}
+
+input[type="checkbox"] {
+    appearance: none; 
+}
+
+#title-cards h1 {
+    background: linear-gradient(90deg,black, var(--secondary-purple));
+    font-size: 56.7px;
+    padding: 2vh 0;
+}
+
+@keyframes scroll {
+    10% {
+        top: -27vh;
+    }
+    15% {
+        top: -26vh;
+    }
+    18% {
+        top: -26vh;
+    }
+    35% {
+        top: -40vh;
+    }
+    40% {
+        top: -39vh;
+    }
+    43% {
+        top: -39vh;
+    }
+    60% {
+        top: -51vh;
+    }
+    65% {
+        top: -50vh;
+    }
+    70% {
+        top: -50vh;
+    }
+    90% {
+        top: -62vh;
+    }
+
+    100% {
+        top: -62vh;
+    }
+}
+
+/*          END OF OUTRO ANIMATION          */
+/*  --------------------------------------  */
+
+
+header {
+    background: linear-gradient(var(--secondary-purple), black);
+    width: 100%;
+    height: 11vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+header * {
+    background: transparent;
+}
+
+#navbar {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#navbar ul {
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+    padding: 0 70px;
+    display: inline-flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+#navbar ul li {
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#navbar ul li a {
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li a:hover {
+    filter: brightness(0.6);
+}
+
+.drawing-container {
+    position: absolute;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    top: 300px;
+    left: 50px;
+}
+
+.drawing {
+    background-color: transparent;
+    position: absolute;
+}
+
+#purple-spaceship{
+    height: 100%;
+    width: 80%;
+    top: 30px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    transform: rotate(130deg);
+    animation: purple-flight var(--my-animation-duration) infinite alternate;
+}
+
+#purple-spaceship-image {
+    top: 0px;
+    left: -150px;
+}
+
+@keyframes purple-flight {
+    100% {
+        transform: translateX(900px) translateY(250px) rotate(90deg);
+    }
+}
+
+#ufo {
+    height: 60%;
+    width: 100%;
+    top: 200px;
+    left: 1000px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    animation: ufo-flight var(--my-animation-duration) infinite alternate;
+}
+
+#ufo-image {
+    left: -270px;
+    top: -60px;
+}
+
+@keyframes ufo-flight {
+    100% {
+        transform: translateX(-50px) translateY(-400px) rotate(-15deg);
+    }
+}
+
+#moon {
+    background: transparent;
+    height: 100%;
+    width: 120%;
+    top: -170px;
+    left: 200px;
+    display: flex;
+    overflow: none;
+    position: absolute;
+}
+
+#moon-image {
+    width: 40%;
+    top: 0px;
+    filter: brightness(0.75) blur(0.1rem);
+    background: radial-gradient(
+        closest-corner circle at 50% 50%,
+        #ccc,
+        #ccc 10%,
+        #445 31%,
+        #223 50%,
+        black 
+      );
+    border-radius: 50%;
+}
+
+#triple-arrow {
+    width: 150%;
+    height: 50%;
+    position: absolute;
+    top: 45vh;
+    left: 38vw;
+    overflow: hidden;
+}
+
+#triple-arrow-image-1 {
+    transform: rotate(-90deg) translateX(-4vh) scaleX(0.6);
+    width: 30%;
+}
+#triple-arrow-image-2 {
+    transform: rotate(-90deg) translateX(-4vh) translateY(5vw) scaleX(0.6);
+    width: 30%;
+}
+#triple-arrow-image-3 {
+    transform: rotate(-90deg) translateX(-4vh) translateY(10vw) scaleX(0.6);
+    width: 30%;
+}
+
+#social-icons {
+    padding-top: 15px;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#social-icons a:hover {
+    filter: opacity(0.5);
+}
+
+#social-icons img {
+    width: 50px;
+}
+
+#welcome-section{
+    background: linear-gradient(black, var(--secondary-purple));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#sun-gradient {
+    border-radius: 50%;
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    top: 190vh;
+    left: 0vh;
+    background: radial-gradient(circle, yellow, rgb(248, 248, 218));
+    filter: blur(17rem);
+}
+
+#music-notes {
+    width: 20%;
+    transform: translateX(70vh) translateY(35vh);
+    animation: bounce 4s infinite alternate;
+}
+
+#blue_spaceship {
+    transform: translateX(-70vh) translateY(-15vh) rotate(90deg);
+    animation: bounce 5s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        padding-bottom: 0px
+    }
+    50% {
+        padding-bottom: 40px;
+    }
+}
+
+#welcome-text {
+    text-align: center;
+    line-height: 1.5;
+    width: 30%;
+    height: 27%;
+}
+
+#welcome-text h1 {
+    font-size: 50px;
+}
+
+#welcome-text p {
+    font-size: 20px;
+}
+
+#technologies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#technologies-icons {
+    background: transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#technologies-icons img {
+    background: transparent;
+}
+
+.tech-logo {
+    width: 10%;
+}
+
+img[alt="JS Logo"] {
+    transform: translateY(15px);
+}
+
+img[alt="Java Logo"] {
+    transform: translateY(5px);
+}
+
+img[alt="C Logo"] {
+    width: 8%;
+    transform: translateY(7px);
+}
+
+img[alt="Git Logo"] {
+    width: 11%;
+    transform: translateY(6px) translateX(8px);
+}
+
+#projects-and-coursework-section{
+    background: linear-gradient(var(--secondary-purple), var(--tertiary-purple), var(--secondary-purple), black);
+    height: 300vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#projects-and-coursework-section * {
+    z-index: 1;
+}
+
+#projects-and-coursework-section h1 {
+    font-size: 38px;
+}
+
+#coursework {
+    height: 20%;
+    width: 30%;
+    padding: 0 0 5vh 0;
+    border-bottom: 1px solid white;
+}
+
+#coursework ul {
+    padding-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+
+#coursework li {
+    padding: 1vh 0;
+    font-size: 25px;
+}
+
+#projects {
+    padding: 5vh 2vh;
+    height: 60%;
+    width: 80%;
+}
+
+.project {
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.project h3 {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 1vh;
+}
+
+
+.project-image {
+    width: 80vh;
+    border-radius: 5%;
+    border: 2px solid grey;
+}
+
+.languages-used {
+    width: 80%;
+    padding: 2% 0 4% 0;
+    height: 15%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+
+.language {
+    text-align: center;
+    margin: 0 7px;
+    height: 70%;
+    width: 25%;
+    background-color: var(--secondary-purple);
+    border-radius: 20%;
+    justify-self: center;
+    align-self: center;
+}
+
+#globe {
+    width: 17%;
+    top: 240vh;
+    left: 73vw;
+    animation: globe-bounce 3s ease-in-out infinite alternate;
+}
+
+@keyframes globe-bounce {
+    100% {
+        transform: translateY(-5vh);
+    }
+}
+
+.project ul {
+    font-size: 25px;
+}
+
+.project ul {
+    margin: 0 5vh;
+    text-align: left;
+    width: 40%;
+    text-wrap: wrap;
+}
+
+img[alt="Guessing Game Image"] {
+    width: 51%;
+}
+
+img[alt="Wordle Archive Image"] {
+    width: 50%;
+    height: 20vh;
+    transform: translateY(7vh);
+}
+
+img[alt="Portfolio Image"] {
+    width: 50%;
+}
+
+#glow-frame {
+    background: radial-gradient(circle, transparent, transparent, yellow);
+    border-radius: 50%;
+    width: 120vh;
+    position: absolute;
+    transform: translateY(20vh);
+    z-index: 0;
+    filter: blur(8rem);
+}
+
+#connect {
+    transform: translateY(15vh);
+}
+
+#triple-arrow-up {
+    width: 150%;
+    height: 50%;
+    position: absolute;
+    top: 434vh;
+    left: 42vw;
+    overflow: none;
+}
+
+#triple-arrow-image-4 {
+    transform: rotate(90deg) translateX(4vh) scaleX(0.6);
+    filter:brightness(2);
+    width: 30%;
+}
+#triple-arrow-image-5 {
+    transform: rotate(90deg) translateX(4vh) translateY(5vw) scaleX(0.6);
+    filter:brightness(2);
+    width: 30%;
+}
+#triple-arrow-image-6 {
+    transform: rotate(90deg) translateX(4vh) translateY(10vw) scaleX(0.6);
+    filter:brightness(2);
+    width: 30%;
+}
