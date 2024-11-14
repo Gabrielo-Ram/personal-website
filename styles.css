@@ -83,38 +83,38 @@ input[type="checkbox"] {
 
 @keyframes scroll {
     10% {
-        top: -27vh;
+        top: -320%;
     }
     15% {
-        top: -26vh;
+        top: -300%;
     }
     18% {
-        top: -26vh;
+        top: -300%;
     }
     35% {
-        top: -40vh;
+        top: -470%;
     }
     40% {
-        top: -39vh;
+        top: -450%;
     }
     43% {
-        top: -39vh;
+        top: -450%;
     }
     60% {
-        top: -51vh;
+        top: -600%;
     }
     65% {
-        top: -50vh;
+        top: -580%;
     }
     70% {
-        top: -50vh;
+        top: -580%;
     }
     90% {
-        top: -62vh;
+        top: -710%;
     }
 
     100% {
-        top: -62vh;
+        top: -710%;
     }
 }
 
@@ -214,8 +214,8 @@ header * {
 #ufo {
     height: 60%;
     width: 100%;
-    top: 200px;
-    left: 1000px;
+    top: 40vh;
+    left: 70vw;
     display: flex;
     overflow: hidden;
     position: absolute;
