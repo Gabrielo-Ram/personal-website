@@ -15,12 +15,22 @@
     color: white;
     scroll-behavior: smooth;
     text-decoration: none;
+    background-color: black;
+}
+
+
+* * {
+    background: transparent;
+}
+
+main {
+    width: 100vw;
 }
 
 #background-slider {
     background-image: url(./assets/stars-wallpaper.jpg);
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,11 +52,13 @@
     transition: filter .2s;
     user-select: none;
 
+    position: relative;
+    top: 45%;
+
     width: 22%;
-    height: 10vh;
+    height: 15vh;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     align-self: center;
     place-items: center;
     overflow: hidden;
@@ -54,11 +66,9 @@
 
 #title-cards {
     text-align: center;
-    padding: 10vh 0 0 0;
     width: 100%;
     position: relative;
-    top: -12vh;
-    z-index: 2;
+    top: -20%;
 }
 
 #hello-label:hover {
@@ -83,38 +93,25 @@ input[type="checkbox"] {
 
 @keyframes scroll {
     10% {
-        top: -320%;
+        top: -185%;
     }
-    15% {
-        top: -300%;
-    }
-    18% {
-        top: -300%;
+    15%, 18% {
+        top: -170%;
     }
     35% {
-        top: -470%;
+        top: -325%;
     }
-    40% {
-        top: -450%;
-    }
-    43% {
-        top: -450%;
+    40%, 43% {
+        top: -310%;
     }
     60% {
-        top: -600%;
+        top: -445%;
     }
-    65% {
-        top: -580%;
+    65%, 70% {
+        top: -435%;
     }
-    70% {
-        top: -580%;
-    }
-    90% {
-        top: -710%;
-    }
-
-    100% {
-        top: -710%;
+    90%, 100% {
+        top: -560%;
     }
 }
 
@@ -124,7 +121,7 @@ input[type="checkbox"] {
 
 header {
     background: linear-gradient(var(--secondary-purple), black);
-    width: 100%;
+    width: 100vw;
     height: 11vh;
     top: 0;
     left: 0;
@@ -175,50 +172,44 @@ header * {
     filter: brightness(0.6);
 }
 
-.drawing-container {
-    position: absolute;
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    top: 300px;
-    left: 50px;
-}
-
 .drawing {
     background-color: transparent;
     position: absolute;
 }
 
 #purple-spaceship{
-    height: 100%;
-    width: 80%;
-    top: 30px;
+    z-index: 2;
+    height: 25vh;
+    width:10vw;
     display: flex;
     overflow: hidden;
-    position: absolute;
+    position: relative;
+    top: 35%;
+    left: -37%;
     transform: rotate(130deg);
     animation: purple-flight var(--my-animation-duration) infinite alternate;
 }
 
 #purple-spaceship-image {
-    top: 0px;
-    left: -150px;
+    width: 19vw;
+    position: absolute;
+    transform: translateX(-9vw);
 }
 
 @keyframes purple-flight {
     100% {
-        transform: translateX(900px) translateY(250px) rotate(90deg);
+        transform: translateX(600%) translateY(160%) rotate(90deg);
     }
 }
 
 #ufo {
     height: 60%;
     width: 100%;
-    top: 40vh;
-    left: 70vw;
+    top: 40%;
+    left: 80%;
     display: flex;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     animation: ufo-flight var(--my-animation-duration) infinite alternate;
 }
 
@@ -229,24 +220,24 @@ header * {
 
 @keyframes ufo-flight {
     100% {
-        transform: translateX(-50px) translateY(-400px) rotate(-15deg);
+        transform: translateX(-8%) translateY(-200%) rotate(-15deg);
     }
 }
 
 #moon {
     background: transparent;
-    height: 100%;
-    width: 120%;
-    top: -170px;
-    left: 200px;
+    height: 20%;
+    width: 9%;
     display: flex;
-    overflow: none;
-    position: absolute;
+    overflow: hidden;
+    position: relative;
+    top: -60%;
+    left: -30%;
 }
 
 #moon-image {
-    width: 40%;
-    top: 0px;
+    width: 85%;
+    transform: translateX(12%) translateY(2%);
     filter: brightness(0.75) blur(0.1rem);
     background: radial-gradient(
         closest-corner circle at 50% 50%,
@@ -260,31 +251,34 @@ header * {
 }
 
 #triple-arrow {
-    width: 150%;
-    height: 50%;
-    position: absolute;
-    top: 45vh;
-    left: 38vw;
+    width: 13%;
+    height: 10vh;
+    margin-bottom: 2%;
     overflow: hidden;
 }
 
 #triple-arrow-image-1 {
-    transform: rotate(-90deg) translateX(-4vh) scaleX(0.6);
-    width: 30%;
+    transform: rotate(-90deg) translateX(-2vh) translateY(0vw) scaleX(0.6);
+    filter:brightness(2);
+    width: 5%;
 }
 #triple-arrow-image-2 {
-    transform: rotate(-90deg) translateX(-4vh) translateY(5vw) scaleX(0.6);
-    width: 30%;
+    transform: rotate(-90deg) translateX(-2vh) translateY(4vw) scaleX(0.6);
+    filter:brightness(2);
+    width: 5%;
 }
 #triple-arrow-image-3 {
-    transform: rotate(-90deg) translateX(-4vh) translateY(10vw) scaleX(0.6);
-    width: 30%;
+    transform: rotate(-90deg) translateX(-2vh) translateY(8vw) scaleX(0.6);
+    filter:brightness(2);
+    width: 5%;
 }
 
 #social-icons {
     padding-top: 15px;
     width: 15%;
     display: flex;
+    position: relative;
+    top: 45%;
     justify-content: space-between;
 }
 
@@ -299,7 +293,7 @@ header * {
 #welcome-section{
     background: linear-gradient(black, var(--secondary-purple));
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,7 +309,7 @@ header * {
     top: 190vh;
     left: 0vh;
     background: radial-gradient(circle, yellow, rgb(248, 248, 218));
-    filter: blur(17rem);
+    filter: blur(12rem);
 }
 
 #music-notes {
@@ -397,7 +391,7 @@ img[alt="Git Logo"] {
 #projects-and-coursework-section{
     background: linear-gradient(var(--secondary-purple), var(--tertiary-purple), var(--secondary-purple), black);
     height: 300vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,7 +518,7 @@ img[alt="Portfolio Image"] {
     position: absolute;
     transform: translateY(20vh);
     z-index: 0;
-    filter: blur(8rem);
+    filter: blur(5rem);
 }
 
 #connect {
@@ -532,26 +526,62 @@ img[alt="Portfolio Image"] {
 }
 
 #triple-arrow-up {
-    width: 150%;
-    height: 50%;
-    position: absolute;
-    top: 434vh;
-    left: 42vw;
+    width: 20%;
+    height: 10vh;
+    margin: 0 auto;
+    margin-top: 10%;
     overflow: none;
 }
 
 #triple-arrow-image-4 {
-    transform: rotate(90deg) translateX(4vh) scaleX(0.6);
+    transform: rotate(90deg) translateX(4vh) translateY(-1vw) scaleX(0.6);
     filter:brightness(2);
-    width: 30%;
+    width: 5%;
 }
 #triple-arrow-image-5 {
-    transform: rotate(90deg) translateX(4vh) translateY(5vw) scaleX(0.6);
+    transform: rotate(90deg) translateX(4vh) translateY(3vw) scaleX(0.6);
     filter:brightness(2);
-    width: 30%;
+    width: 5%;
 }
 #triple-arrow-image-6 {
-    transform: rotate(90deg) translateX(4vh) translateY(10vw) scaleX(0.6);
+    transform: rotate(90deg) translateX(4vh) translateY(7vw) scaleX(0.6);
     filter:brightness(2);
-    width: 30%;
+    width: 5%;
+}
+
+@media (max-width: 600px) {
+
+    * {
+        font-size: 0.5em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #purple-spaceship-image, #ufo-image, #moon-image, #music-notes, #triple-arrow-up, #triple-arrow {
+        width: 0%;
+        top: 0px;
+        left: 0px;
+    }
+
+    #purple-spaceship, #ufo, #moon, #music-notes {
+        animation: none;
+    }
+
+    #technologies {
+        transform: translateY(16vh);
+    }
+
+    #projects {
+        transform: translateY(20vh);
+    }
+
+    #hello-label {
+        width: 50%;
+    }
+
+    #title-cards {
+        position: relative;
+    }
 }
