@@ -236,7 +236,7 @@ header * {
 }
 
 #moon-image {
-    width: 85%;
+    width: 75%;
     transform: translateX(12%) translateY(2%);
     filter: brightness(0.75) blur(0.1rem);
     background: radial-gradient(
