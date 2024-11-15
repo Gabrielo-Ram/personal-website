@@ -23,10 +23,6 @@
     background: transparent;
 }
 
-main {
-    width: 100vw;
-}
-
 #background-slider {
     background-image: url(./assets/stars-wallpaper.jpg);
     height: 100vh;
@@ -44,7 +40,7 @@ main {
     border-radius: 16px;
     cursor: pointer;
     box-sizing: border-box;
-    font-family: din-round,sans-serif;
+    font-family: din-round, sans-serif;
     font-weight: 700;
     outline: none;
     touch-action: manipulation;
