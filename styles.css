@@ -23,6 +23,10 @@
     background: transparent;
 }
 
+main {
+    width: 100vw;
+}
+
 #background-slider {
     background-image: url(./assets/stars-wallpaper.jpg);
     height: 100vh;
@@ -40,7 +44,7 @@
     border-radius: 16px;
     cursor: pointer;
     box-sizing: border-box;
-    font-family: din-round, sans-serif;
+    font-family: din-round,sans-serif;
     font-weight: 700;
     outline: none;
     touch-action: manipulation;
@@ -180,7 +184,7 @@ header * {
     display: flex;
     overflow: hidden;
     position: relative;
-    top: 35%;
+    top: 30%;
     left: -37%;
     transform: rotate(130deg);
     animation: purple-flight var(--my-animation-duration) infinite alternate;
@@ -199,10 +203,10 @@ header * {
 }
 
 #ufo {
-    height: 60%;
-    width: 100%;
-    top: 40%;
-    left: 80%;
+    height: 40%;
+    width: 15%;
+    top: 30%;
+    left: 35%;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -555,7 +559,7 @@ img[alt="Portfolio Image"] {
         font-size: 2em;
     }
 
-    #purple-spaceship-image, #ufo-image, #moon-image, #music-notes, #triple-arrow-up, #triple-arrow, #glow-frame {
+    #purple-spaceship-image, #ufo-image, #moon-image, #music-notes, #triple-arrow-up, #triple-arrow {
         width: 0%;
         top: 0px;
         left: 0px;
