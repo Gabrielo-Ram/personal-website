@@ -67,8 +67,7 @@ main {
 #title-cards {
     text-align: center;
     width: 100%;
-    position: relative;
-    top: -20%;
+    position: absolute;
 }
 
 #hello-label:hover {
@@ -88,30 +87,36 @@ input[type="checkbox"] {
 #title-cards h1 {
     background: linear-gradient(90deg,black, var(--secondary-purple));
     font-size: 56.7px;
-    padding: 2vh 0;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes scroll {
+    0% {
+        top: 0;
+    }
     10% {
-        top: -185%;
+        top: -13vh;
     }
     15%, 18% {
-        top: -170%;
+        top: -11vh;
     }
     35% {
-        top: -325%;
+        top: -23vh;
     }
     40%, 43% {
-        top: -310%;
+        top: -22vh;
     }
     60% {
-        top: -445%;
+        top: -35vh;
     }
     65%, 70% {
-        top: -435%;
+        top: -33vh;
     }
     90%, 100% {
-        top: -560%;
+        top: -44vh;
     }
 }
 
